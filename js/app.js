@@ -109,3 +109,20 @@ btnEvaluate.addEventListener("click", async () => {
     resultLatex.innerHTML = '<span class="text-muted">Sin resultado por error…</span>';
   }
 });
+
+// -----------------------------------------------------------------
+// EVENT LISTENER: BOTÓN DE LIMPIAR
+// -----------------------------------------------------------------
+
+// Asigna una función simple que se ejecuta al hacer clic en "Limpiar".
+btnClear.addEventListener("click", () => {
+  // Borra el contenido del campo de texto.
+  operationInput.value = "";
+  // Limpia el mensaje de estado.
+  statusMessage.textContent = "";
+  // Restablece los campos de resultado a su estado inicial.
+  resultValue.innerHTML =
+    '<span class="text-muted">Sin resultado aún…</span>';
+  resultLatex.innerHTML =
+    '<span class="text-muted">Sin resultado aún…</span>';
+});
